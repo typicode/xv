@@ -64,7 +64,7 @@ If you're using TypeScript, build your code before and run `xv` directly on comp
 
 Edit `package.json` to exclude test files from being published.
 
-```json
+```js
 {
   "files": [
     "lib",
