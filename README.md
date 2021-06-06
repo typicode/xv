@@ -4,10 +4,10 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 
 ## Features
 
-* Pure ESM
-* Extremely lightweight
-* No config file, only one function `test()`, easy to work with
-* Good for simple projects (used by [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno))
+- Pure ESM
+- Extremely lightweight
+- No config file, only one function `test()`, easy to work with
+- Good for simple projects (used by [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno))
 
 _Requires Node v14.13.1+_
 
@@ -23,8 +23,8 @@ $ yarn add xv --dev
 import { equal } from 'assert/strict'
 import { test } from 'xv'
 
-await test("add", () => {
-	equal(add(1, 2), 3)
+await test('add', () => {
+  equal(add(1, 2), 3)
 })
 ```
 
@@ -43,7 +43,6 @@ If you like this project and my work, you can [become a sponsor here](https://gi
 
 Note: if you're already sponsoring [husky](https://github.com/typicode/husky), feel free to use `xv` in any type of project.
 
-
 ## Assertions
 
 Use Node's [`assert`](https://nodejs.org/api/assert.html) module.
@@ -56,10 +55,10 @@ If you're using TypeScript, build your code before and run `xv` directly on comp
 
 ```json
 {
-	"compilerOptions": {
-		"outDir": "./lib",
-		"module": "ESNext"
-	}
+  "compilerOptions": {
+    "outDir": "./lib",
+    "module": "ESNext"
+  }
 }
 ```
 
