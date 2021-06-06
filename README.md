@@ -64,15 +64,15 @@ If you're using TypeScript, build your code before and run `xv` directly on comp
 
 Edit `package.json` to exclude test files from being published.
 
-```js
+```json
 {
   "files": [
-		"lib",
-		"!lib/**/*.test.*" // exclude test files
-	],
+    "lib",
+    "!lib/**/*.test.*" // exclude test files
+  ],
   "scripts": {
-		"build": "rm -rf lib && tsc",
-	  "test": "npm run build && xv 'lib/**/*.test.js'"
-	}
+    "build": "rm -rf lib && tsc",
+    "test": "npm run build && xv 'lib/**/*.test.js'"
+  }
 }
 ```
