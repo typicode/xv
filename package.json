@@ -26,6 +26,7 @@
     "type": "git",
     "url": "git+https://github.com/typicode/xv.git"
   },
+  "funding": "https://github.com/sponsors/typicode",
   "license": "See LICENSE",
   "author": "Typicode <typicode@gmail.com>",
   "type": "module",
