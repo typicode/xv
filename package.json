@@ -43,7 +43,9 @@
     "test": "npm run build && node lib/index.test.js && node lib/bin.js 'lib/**/*.test.js'",
     "lint": "eslint src --ext .ts --ignore-path .gitignore",
     "build": "del-cli lib && tsc",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepublishOnly": "npm run build",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {
     "fast-glob": "^3.2.5"
