@@ -11,19 +11,11 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 
 _Requires Node v14.13.1+_
 
-## Early access for Sponsors
-
-For a limited time `xv` is available to Sponsors only. Once the goal of 70 sponsors is reached (currently 55), I'll release it under MIT for everyone 🎉
-
-If you like this project and my work, you can [become a sponsor here](https://github.com/sponsors/typicode). Thank you for your support!
-
-Note: if you're already sponsoring [husky](https://github.com/typicode/husky), feel free to use `xv` in any type of project.
-
 ## Usage
 
 ```sh
-npm install xv --save-dev
-yarn add xv --dev
+$ npm install xv --save-dev
+$ yarn add xv --dev
 ```
 
 ```js
@@ -37,11 +29,20 @@ await test("add", () => {
 ```
 
 ```sh
-xv 'src/**/*.test.js' // Run all .test.js files in src/
-node src/add.test.js  // Run specific file
+$ xv 'src/**/*.test.js' # Run all .test.js files in src/
+$ node src/add.test.js  # Run specific file
 ```
 
 That's all... really :)
+
+## Early access for Sponsors
+
+For a limited time `xv` is available to Sponsors only. Once the goal of 70 sponsors is reached (currently 55), I'll release it under MIT for everyone 🎉
+
+If you like this project and my work, you can [become a sponsor here](https://github.com/sponsors/typicode). Thank you for your support!
+
+Note: if you're already sponsoring [husky](https://github.com/typicode/husky), feel free to use `xv` in any type of project.
+
 
 ## Assertions
 
