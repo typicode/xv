@@ -1,0 +1,59 @@
+{
+  "name": "xv",
+  "version": "0.1.0",
+  "description": "Modern and low maintenance test library/CLI",
+  "keywords": [
+    "test",
+    "framework",
+    "lib",
+    "cli",
+    "runner",
+    "assert",
+    "jest",
+    "mocha",
+    "ava",
+    "tap",
+    "tape",
+    "async",
+    "await",
+    "typescript"
+  ],
+  "homepage": "https://github.com/typicode/xv#readme",
+  "bugs": {
+    "url": "https://github.com/typicode/xv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typicode/xv.git"
+  },
+  "license": "See LICENSE",
+  "author": "Typicode <typicode@gmail.com>",
+  "type": "module",
+  "exports": "./lib/index.js",
+  "bin": "./lib/bin.js",
+  "files": [
+    "lib",
+    "!lib/**/*.test.*",
+    "LICENSE-MIT",
+    "LICENSE-SPONSOR"
+  ],
+  "scripts": {
+    "test": "npm run build && node lib/index.test.js && node lib/bin.js 'lib/**/*.test.js'",
+    "lint": "eslint src --ext .ts --ignore-path .gitignore",
+    "build": "del-cli lib && tsc",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "fast-glob": "^3.2.5"
+  },
+  "devDependencies": {
+    "@sindresorhus/tsconfig": "^1.0.2",
+    "@typicode/eslint-config": "^0.1.2",
+    "del-cli": "^3.0.1",
+    "husky": "^6.0.0",
+    "typescript": "^4.3.2"
+  },
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0"
+  }
+}
