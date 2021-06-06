@@ -1,4 +1,4 @@
-# :x::heavy_check_mark:
+# :x::heavy_check_mark: [![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml)
 
 Setting up and maintaining a test framework can sometimes be complex and time consuming. I've created `xv` to be a low maintainance, easy to setup and learn test lib/CLI. You can use it in small to medium projects.
 
