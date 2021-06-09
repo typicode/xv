@@ -24,12 +24,13 @@ $ yarn add xv --dev
 
 ```js
 // src/add.test.js
-import { equal } from 'assert/strict'
+import { strict as assert } from 'assert' // Works with Node 14 and 16
+// import { equal } from 'assert/strict'  // Simpler but works with Node 16 only
 import { test } from 'xv'
 import { add } from './add.js'
 
-await test('add', () => {
-  equal(add(1, 2), 3)
+await test('should add', () => {
+  assert.equal(add(1, 1), 2)
 })
 ```
 
@@ -44,13 +45,27 @@ That's all... really :)
 
 For a limited time `xv` is available to Sponsors only. Once the goal of 70 sponsors is reached (currently 55), I'll release it under MIT for everyone 🎉
 
-If you like this project and my work, you can [become a sponsor here](https://github.com/sponsors/typicode). Thank you for your support!
+__If you like this project and my work, you can [become a sponsor here](https://github.com/sponsors/typicode).__ Thank you for your support!
 
 Note: if you're already sponsoring [husky](https://github.com/typicode/husky), feel free to use `xv` in any type of project.
 
 ## Assertions
 
-Use Node's [`assert`](https://nodejs.org/api/assert.html) module.
+Use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module.
+
+If you're running tests with Node 14 AND 16, use the following style:
+
+```js
+import { assert as strict } from 'assert'
+assert.equal(actual, expected)
+```
+
+If you're only working with Node 16, you can simplify the import:
+
+```js
+import { equal } from 'assert/strict'
+equal(actual, expected)
+```
 
 ## TypeScript
 
