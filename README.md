@@ -1,5 +1,10 @@
 <h1 align="center">
+  <br>
+  <br>
   <img src="xv.svg" alt="xv" height=50>
+  <br>
+  <br>
+  <br>
 </h1>
 
 [![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml)
