@@ -41,6 +41,7 @@
   ],
   "scripts": {
     "test": "npm run build && node lib/index.test.js && node lib/bin.js 'lib/**/*.test.js'",
+    "test:output": "npm run build && node lib/bin.js output.js",
     "lint": "eslint src --ext .ts --ignore-path .gitignore",
     "build": "del-cli lib && tsc",
     "prepare": "husky install",
