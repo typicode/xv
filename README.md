@@ -4,74 +4,84 @@
 
 [![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml)
 
-Setting up and maintaining a test framework can sometimes be complex and time consuming. I've created `xv` to be a low maintainance, easy to setup and learn test lib/CLI. You can use it in small to medium projects.
+Setting up and maintaining a test framework can sometimes be complex and time consuming. I've created `xv` to be a low maintainance, easy to setup and learn test lib/CLI. Great for small and medium projects.
 
 ## Features
 
-- Pure ESM
 - Extremely lightweight
 - No config, only one function `test()`, simple
+- Pure ESM package
 - Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno)
 
 _Requires Node v14.13.1+_
 
-## Usage
+## Install
+
+Install `xv`:
 
 ```sh
-$ npm install xv --save-dev
-$ yarn add xv --dev
+npm install xv --save-dev
+yarn add xv --dev
 ```
 
+## Usage
+
+Create a test file `src/add.test.js` and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module.
+
+If you need your tests to be compatible with __Node 14 and 16__:
+
 ```js
-// src/add.test.js
-import { strict as assert } from 'assert' // Works with Node 14 and 16
-// import { equal } from 'assert/strict'  // Simpler but works with Node 16 only
+import { strict as assert } from 'assert' 
 import { test } from 'xv'
-import { add } from './add.js'
 
 await test('should add', () => {
-  assert.equal(add(1, 1), 2)
+  assert.equal(1 + 2, 3)
 })
 ```
 
-```sh
-$ xv 'src/**/*.test.js' # Run all .test.js files in src/
-$ node src/add.test.js  # Run specific file
+If you're working with __Node 16 only__, you can simplify your code:
+
+```js
+import { equal } from 'assert/strict' 
+import { test } from 'xv'
+
+await test('should add', () => {
+  equal(1 + 2, 3)
+})
 ```
 
-That's all... really :)
+In `package.json`, edit `test` script:
+
+```json
+{
+  "scripts": {
+    "test": "xv 'src/**/*.test.js'"
+   }
+}
+```
+
+```sh
+npm test             # Run all .test.js files in src/    
+node src/add.test.js # Run specific test file
+```
+
+__That's all there is to know... for real :)__
+
+_Note_ `xv` is a pure ESM package, read [this](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) if you're getting `ERR_REQUIRE_ESM` error.
 
 ## Early access for Sponsors
 
 For a limited time `xv` is available to Sponsors only. Once the goal of 70 sponsors is reached (currently 55), I'll release it under MIT for everyone 🎉
 
-__If you like this project and my work, you can [become a sponsor here](https://github.com/sponsors/typicode).__ Thank you for your support!
+__If you like this project and my work, please help me reach this goal by [becoming a sponsor here](https://github.com/sponsors/typicode). Thank you!__ 
 
-Note: if you're already sponsoring [husky](https://github.com/typicode/husky), feel free to use `xv` in any type of project.
-
-## Assertions
-
-Use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module.
-
-If you're running tests with Node 14 AND 16, use the following style:
-
-```js
-import { assert as strict } from 'assert'
-assert.equal(actual, expected)
-```
-
-If you're only working with Node 16, you can simplify the import:
-
-```js
-import { equal } from 'assert/strict'
-equal(actual, expected)
-```
+_Note: if you're already sponsoring me via [husky](https://github.com/typicode/husky), feel free to use `xv` in any type of project._
 
 ## TypeScript
 
-If you're using TypeScript, build your code before and run `xv` directly on compiled test files.
+If you're using TypeScript, compile your `.ts` and run `xv` directly on compiled `.js` files.
 
-`tsconfig.json`
+Assuming you have the following `tsconfig.json`:
 
 ```json
 {
@@ -82,7 +92,7 @@ If you're using TypeScript, build your code before and run `xv` directly on comp
 }
 ```
 
-Edit `package.json` to exclude test files from being published.
+Edit `package.json` to exclude test files from being published andrun `tsc` before `xv`:
 
 ```js
 {
