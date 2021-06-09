@@ -11,7 +11,7 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 - Pure ESM
 - Extremely lightweight
 - No config, only one function `test()`, simple
-- Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno))
+- Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno)
 
 _Requires Node v14.13.1+_
 
