@@ -1,4 +1,6 @@
-<img src="xv.svg" alt="xv">
+<h1 align="center">
+  <img src="xv.svg" alt="xv" height=50>
+</h1>
 
 [![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml)
 
@@ -8,8 +10,8 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 
 - Pure ESM
 - Extremely lightweight
-- No config file, only one function `test()`, easy to work with
-- Good for simple projects (used by [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno))
+- No config, only one function `test()`, simple
+- Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno))
 
 _Requires Node v14.13.1+_
 
@@ -24,6 +26,7 @@ $ yarn add xv --dev
 // src/add.test.js
 import { equal } from 'assert/strict'
 import { test } from 'xv'
+import { add } from './add.js'
 
 await test('add', () => {
   equal(add(1, 2), 3)
