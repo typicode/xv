@@ -1,23 +1,28 @@
-import { AssertionError } from 'assert'
-
 export async function test(
   title: string,
   fn: () => void | Promise<void>,
 ): Promise<void> {
   try {
     await fn()
-  } catch (err) {
-    if (err instanceof AssertionError) {
-      console.log('  x', title)
-      console.log(err.message)
-      console.log(
-        err.stack
-          ?.split('\n')
-          .filter((s) => !s.includes('xv/'))
-          .join('\n'),
-      )
+  } catch (e) {
+    // Fail
+    console.log(`\tX ${title}`)
+    if (e instanceof Error) {
+      // Filter self from stack trace
+      e.stack = e.stack
+        ?.split('\n')
+        .filter((s) => !s.includes(import.meta.url))
+        .join('\n')
+
+      // Log error
+      console.error(e.stack)
+
+      // Exit
+      process.exit(1)
     }
-    throw err
+    // Not an Error, throw as it is
+    throw e
   }
-  console.log('   ', title)
+  // Success
+  console.log(`\t  ${title}`)
 }

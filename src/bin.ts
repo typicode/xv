@@ -7,9 +7,5 @@ const entries = fg.sync(glob)
 
 for (const entry of entries) {
   console.log(entry)
-  try {
-    await import(join(process.cwd(), entry))
-  } catch {
-    process.exit(1)
-  }
+  await import(join(process.cwd(), entry))
 }
