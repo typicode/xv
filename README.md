@@ -44,7 +44,7 @@ await test('should add', () => {
 })
 ```
 
-If you're working with __Node 16 only__, you can simplify your code:
+If you're working with __Node 16 and later only__, you can simplify your code:
 
 ```js
 import { equal } from 'assert/strict' 
