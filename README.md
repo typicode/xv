@@ -13,7 +13,7 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 
 ## Features
 
-- Extremely lightweight
+- Lightweight and fast
 - No config, only one function `test()`, simple
 - Pure ESM package
 - Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno)
