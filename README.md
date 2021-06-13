@@ -14,11 +14,10 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 ## Features
 
 - Lightweight and fast
-- No config, only one function `test()`, simple
-- Pure ESM package
+- Zero-config, zero-API, simple
 - Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno)
 
-_Requires Node v14.13.1+_
+_Requires Node v12.20.0+_
 
 ## Install
 
@@ -31,28 +30,26 @@ yarn add xv --dev
 
 ## Usage
 
-Create a test file `src/add.test.js` and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module.
+Create a test file `src/add.test.js` (or `src/test.js`)and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module.
 
-If you need your tests to be compatible with __Node 14 and 16__:
+If you need your tests to be compatible with **Node <=16**:
 
 ```js
-import { strict as assert } from 'assert' 
-import { test } from 'xv'
+import { strict as assert } from 'assert'
 
-await test('should add', () => {
+export function testAdd() {
   assert.equal(1 + 2, 3)
-})
+}
 ```
 
-If you're working with __Node 16 only__, you can simplify your code:
+If you're targeting **Node >=16**, you can simplify your code:
 
 ```js
-import { equal } from 'assert/strict' 
-import { test } from 'xv'
+import { equal } from 'assert/strict'
 
-await test('should add', () => {
+export function testAdd() {
   equal(1 + 2, 3)
-})
+}
 ```
 
 In `package.json`, edit `test` script:
@@ -60,25 +57,25 @@ In `package.json`, edit `test` script:
 ```json
 {
   "scripts": {
-    "test": "xv 'src/**/*.test.js'"
-   }
+    "test": "xv src"
+  }
 }
 ```
 
 ```sh
-npm test             # Run all .test.js files in src/    
-node src/add.test.js # Run specific test file
+npm test               # run all test files in ./src
+npx xv src/add.test.js # run a single test file
 ```
 
-__That's all there is to know... for real :)__
+**That's all there is to know... for real :)**
 
-_Note_ `xv` is a pure ESM package, read [this](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) if you're getting `ERR_REQUIRE_ESM` error.
+_Note_ `xv` is a pure ESM package, read [this](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
 
 ## Early access for Sponsors
 
-For a limited time `xv` is available to Sponsors only. Once the goal of 70 sponsors is reached (currently 55), I'll release it under MIT for everyone 🎉
+For a limited time `xv` is available to Sponsors only. Once the goal of 70 sponsors is reached (currently 57), I'll release it under MIT for everyone 🎉
 
-__If you like this project and my work, please help me reach this goal by [becoming a sponsor here](https://github.com/sponsors/typicode). Thank you!__ 
+**If you like this project and my work, please help me reach this goal by [becoming a sponsor here](https://github.com/sponsors/typicode). Thank you!**
 
 _Note: if you're already sponsoring me via [husky](https://github.com/typicode/husky), feel free to use `xv` in any type of project._
 
@@ -91,8 +88,7 @@ Assuming you have the following `tsconfig.json`:
 ```json
 {
   "compilerOptions": {
-    "outDir": "./lib",
-    "module": "ESNext"
+    "outDir": "./lib"
   }
 }
 ```
@@ -103,11 +99,13 @@ Edit `package.json` to exclude test files from being published andrun `tsc` befo
 {
   "files": [
     "lib",
-    "!lib/**/*.test.*" // exclude test files
+    // exclude test files
+    "!lib/**/*.test.js",
+    "!lib/**/test.js"
   ],
   "scripts": {
     "build": "rm -rf lib && tsc",
-    "test": "npm run build && xv 'lib/**/*.test.js'"
+    "test": "npm run build && xv lib"
   }
 }
 ```
