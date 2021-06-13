@@ -13,8 +13,8 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 
 ## Features
 
-- Lightweight and fast
-- Zero-config, zero-API, simple
+- Lightweight, simple and fast
+- Zero-config, zero-API, zero-dependency
 - Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno)
 
 _Requires Node v12.20.0+_
@@ -68,8 +68,6 @@ npx xv src/add.test.js # run a single test file
 ```
 
 **That's all there is to know... for real :)**
-
-_Note_ `xv` is a pure ESM package, read [this](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
 
 ## Early access for Sponsors
 
