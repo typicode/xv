@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import { lstat, opendir } from 'fs/promises'
+import { promises as fs } from 'fs'
 import { basename, dirname, join } from 'path'
 
 async function* walk(dir: string): AsyncGenerator<string> {
-  for await (const d of await opendir(dir)) {
+  for await (const d of await fs.opendir(dir)) {
     const entry = join(dir, d.name)
     if (d.isDirectory()) yield* walk(entry)
     else if (d.isFile()) yield entry
@@ -23,7 +23,7 @@ async function runTestFile(file: string): Promise<void> {
 }
 
 async function run(arg = '.') {
-  if ((await lstat(arg)).isFile()) {
+  if ((await fs.lstat(arg)).isFile()) {
     return runTestFile(arg)
   }
   for await (const file of walk(arg)) {
