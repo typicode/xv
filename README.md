@@ -30,7 +30,7 @@ yarn add xv --dev
 
 ## Usage
 
-Create a test file `src/add.test.js` (or `src/test.js`)and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module.
+Create a test file `src/add.test.js` (or `src/test.js`) and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module.
 
 If you need your tests to be compatible with **Node <=16**:
 
