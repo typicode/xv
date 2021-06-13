@@ -49,9 +49,6 @@
     "prepublishOnly": "npm run build",
     "postversion": "git push && git push --tags && npm publish"
   },
-  "dependencies": {
-    "fast-glob": "^3.2.5"
-  },
   "devDependencies": {
     "@sindresorhus/tsconfig": "^1.0.2",
     "@typicode/eslint-config": "^0.1.2",
