@@ -21,8 +21,6 @@ _Requires Node v12.20.0+_
 
 ## Install
 
-Install `xv`:
-
 ```sh
 npm install xv --save-dev
 yarn add xv --dev
