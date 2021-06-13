@@ -2,6 +2,7 @@
   "extends": "@sindresorhus/tsconfig",
   "compilerOptions": {
     "outDir": "./lib",
-    "module": "ESNext"
+    "module": "ESNext",
+    "declaration": false
   }
 }
