@@ -14,7 +14,7 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 ## Features
 
 - Lightweight, simple and fast
-- Zero-config, zero-API, zero-dependency
+- Zero-config, zero-API, zero-dependencies
 - Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno)
 
 _Requires Node v12.20.0+_
