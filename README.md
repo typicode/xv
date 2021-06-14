@@ -9,7 +9,7 @@
 
 [![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml)
 
-Setting up and maintaining a test framework can sometimes be complex and time consuming. I've created `xv` to be a low maintainance, easy to setup and learn test lib/CLI. Great for small and medium projects.
+Setting up and maintaining a test framework can sometimes be complex and time consuming. I've created `xv` to be a low maintainance, easy to setup and use test runner. Great for small and medium projects.
 
 ## Features
 
