@@ -13,10 +13,13 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 
 ## Features
 
-- Lightweight, simple and fast
-- Zero-config, zero-API, zero-dependencies
-- Supports ESM
-- Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno)
+- ⚡ __Super fast__ `~0.03s` 
+- 🐦 __Lighweight__ `<10kB` with zero dependencies
+- 🔰 __Simple__ (no API to learn)
+- Zero-config
+- Natively supports ESM
+
+Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno).
 
 _Requires Node v12.20.0+_
 
@@ -29,29 +32,18 @@ yarn add xv --dev
 
 ## Usage
 
-Create a test file `src/add.test.js` (or `src/test.js`) and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module.
-
-If you need your tests to be compatible with **Node <=16**:
+Create a test file `src/add.test.js` (or `src/test.js`) and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module:
 
 ```js
-import { strict as assert } from 'assert'
+import { strict as assert } from 'assert' // Node <=16
+// import { equal } from 'assert/strict'  // Node >=16
 
 export function testAdd() {
   assert.equal(1 + 2, 3)
 }
 ```
 
-If you're targeting **Node >=16**, you can simplify your code:
-
-```js
-import { equal } from 'assert/strict'
-
-export function testAdd() {
-  equal(1 + 2, 3)
-}
-```
-
-In `package.json`, edit `test` script:
+Edit `package.json`:
 
 ```json
 {
@@ -61,18 +53,18 @@ In `package.json`, edit `test` script:
 }
 ```
 
+Run your tests:
+
 ```sh
 npm test               # run all test files in ./src
 npx xv src/add.test.js # run a single test file
 ```
 
-**That's all there is to know... for real :)**
-
 ## Early access for Sponsors
 
 For a limited time `xv` is available to Sponsors only. Once the goal of 70 sponsors is reached (currently 58), I'll release it under MIT for everyone 🎉
 
-**If you like this project and my work, please help me reach this goal by [becoming a sponsor here](https://github.com/sponsors/typicode). Thank you!**
+**If you like this project and my work, please help me reach this goal by [becoming a sponsor](https://github.com/sponsors/typicode). Thank you!**
 
 _Note: if you're already sponsoring me via [husky](https://github.com/typicode/husky), feel free to use `xv` in any type of project._
 
