@@ -15,8 +15,7 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 
 - ⚡ __Super fast__ `~0.03s` 
 - 🐦 __Lighweight__ `<10kB` with zero dependencies
-- 🔰 __Simple__ (no API to learn)
-- Zero-config
+- 🔰 __Simple__ no API to learn, zero-config
 - Natively supports ESM
 
 Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno).
