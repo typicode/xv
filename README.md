@@ -24,6 +24,8 @@ Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.co
 
 _Requires Node v12.20.0+_
 
+_Please help me build OSS 👉 [GitHub Sponsors](https://github.com/sponsors/typicode)_
+
 ## Install
 
 ```sh
