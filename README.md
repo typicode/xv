@@ -61,6 +61,8 @@ npm test               # run all test files in ./src
 npx xv src/add.test.js # run a single test file
 ```
 
+_That's all there is to know._ 😎
+
 ## Early access for Sponsors
 
 For a limited time `xv` is available to Sponsors only. Once the goal of 70 sponsors is reached (currently 58), I'll release it under MIT for everyone 🎉
