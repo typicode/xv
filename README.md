@@ -67,7 +67,7 @@ _That's all there is to know._ 😎
 
 ## Early access for Sponsors
 
-For a limited time `xv` is available to Sponsors only. Once the goal of 70 sponsors is reached (currently 58), I'll release it under MIT for everyone 🎉
+For a limited time `xv` is available to Sponsors only. Once the goal of 70 sponsors is reached (__currently 61/70__), I'll release it under MIT for everyone 🎉
 
 **If you like this project and my work, please help me reach this goal by [becoming a sponsor](https://github.com/sponsors/typicode). Thank you!**
 
