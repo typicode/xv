@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { promises as fs } from 'fs'
 import { basename, dirname, join } from 'path'
+import { pathToFileURL } from 'url'
 
 async function* walk(dir: string): AsyncGenerator<string> {
   for await (const d of await fs.opendir(dir)) {
@@ -11,7 +12,9 @@ async function* walk(dir: string): AsyncGenerator<string> {
 }
 
 async function runTestFile(file: string): Promise<void> {
-  for (const value of Object.values(await import(join(process.cwd(), file)))) {
+  for (const value of Object.values(
+    await import(pathToFileURL(file).toString()),
+  )) {
     if (typeof value === 'function') {
       try {
         await value()
