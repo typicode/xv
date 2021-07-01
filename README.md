@@ -15,12 +15,12 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 
 ## Features
 
-- ⚡ __Super fast__ `~0.03s` 
+- ⚡ __Super fast__ `~0.03s`
 - 🐦 __Lighweight__ `<10kB` with zero dependencies
 - 🔰 __Simple__ no API to learn, zero-config
 - Natively supports ESM
 
-Used in [lowdb](https://github.com/typicode/lowdb) and [steno](https://github.com/typicode/steno).
+Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and [husky-init](https://github.com/typicode/husky-init).
 
 _Requires Node v12.20.0+_
 
