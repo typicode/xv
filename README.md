@@ -35,9 +35,10 @@ yarn add xv --dev
 
 ## Usage
 
-Create a test file `src/add.test.js` (or `src/test.js`) and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module:
+Create a test file and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module:
 
 ```js
+// src/add.test.js (or src/test.js)
 import { strict as assert } from 'assert' // Node <=16
 // import { equal } from 'assert/strict'  // Node >=16
 
@@ -63,7 +64,7 @@ npm test               # run all test files in ./src
 npx xv src/add.test.js # run a single test file
 ```
 
-_That's all there is to know._ 😎
+__xv is so simple that there's nothing else to learn__ 😎
 
 ## Early access for Sponsors
 
