@@ -1,6 +1,6 @@
 {
   "name": "xv",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "Modern and low maintenance test library/CLI",
   "keywords": [
     "test",
