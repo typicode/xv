@@ -16,9 +16,9 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 ## Features
 
 - ⚡ __Super fast__ `~0.03s`
-- 🐦 __Lighweight__ `<10kB` with zero dependencies
+- 🐦 __Lighweight__ `<50 LOC` with zero dependencies
 - 🔰 __Simple__ no API to learn, zero-config
-- Natively supports ESM
+- ✨ __Modern__ ESM support without extra config
 
 Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and [husky-init](https://github.com/typicode/husky-init).
 
@@ -65,14 +65,6 @@ npx xv src/add.test.js # run a single test file
 ```
 
 __xv is so simple that there's nothing else to learn__ 😎
-
-## Early access for Sponsors
-
-For a limited time `xv` is available to Sponsors only. Once the goal of 70 sponsors is reached (__currently 61/70__), I'll release it under MIT for everyone 🎉
-
-**If you like this project and my work, please help me reach this goal by [becoming a sponsor](https://github.com/sponsors/typicode). Thank you!**
-
-_Note: if you're already sponsoring me via [husky](https://github.com/typicode/husky), feel free to use `xv` in any type of project._
 
 ## TypeScript
 
