@@ -15,10 +15,11 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 
 ## Features
 
-- ⚡ __Super fast__ `~0.03s`
-- 🐦 __Lighweight__ `<50 LOC` with zero dependencies
-- 🔰 __Simple__ no API to learn, zero-config
-- ✨ __Modern__ ESM support without extra config
+- 🐦 __Lighweight__ - Less than [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts), with zero dependencies
+- ✨ __Modern__ - ESM support without extra config
+- 🔰 __Simple__ - no API to learn, zero-config
+- ⚡ __Super fast__ - `~0.03s`
+
 
 Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and [husky-init](https://github.com/typicode/husky-init).
 
@@ -38,7 +39,7 @@ yarn add xv --dev
 Create a test file and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module:
 
 ```js
-// src/add.test.js (or src/test.js)
+// src/add.test.js
 import { strict as assert } from 'assert' // Node <=16
 // import { equal } from 'assert/strict'  // Node >=16
 
@@ -64,7 +65,9 @@ npm test               # run all test files in ./src
 npx xv src/add.test.js # run a single test file
 ```
 
-__xv is so simple that there's nothing else to learn__ 😎
+## Convention
+
+When provided a directory, `xv` will look for files named `*.test.js` and `test.js`.
 
 ## TypeScript
 
