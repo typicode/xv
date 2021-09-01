@@ -11,7 +11,7 @@
 
 Setting up and maintaining a test framework can sometimes be complex and time consuming. I've created `xv` to be a test runner that is __low maintainance, easy to setup and use__. 
 
-`xv` is great for small and medium projects.
+`xv` is great for __small and medium projects__.
 
 ## Features
 
