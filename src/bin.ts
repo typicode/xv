@@ -19,7 +19,8 @@ async function runTestFile(file: string): Promise<void> {
       try {
         await value()
       } catch (e) {
-        if (e instanceof Error) console.error(e.stack)
+        console.error(e instanceof Error ? e.stack : e)
+        process.exit(1)
       }
     }
   }
