@@ -15,7 +15,7 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 
 ## Features
 
-- 🐦 __Lighweight__ - Less than [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts), with zero dependencies
+- 🐦 __Lighweight__ - [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts), with zero dependencies
 - ✨ __Modern__ - ESM support without extra config
 - 🔰 __Simple__ - no API to learn, zero-config
 - ⚡ __Super fast__ - `~0.03s`
