@@ -40,7 +40,7 @@ Create a test file `src/add.test.js` and use Node's built-in [`assert`](https://
 
 ```js
 import { strict as assert } from 'assert' // Node <=16
-// import strict from 'assert/strict'  // Node >=16
+// import assert from 'assert/strict'  // Node >=16
 
 export function testAdd() {
   assert.equal(1 + 2, 3)
