@@ -16,16 +16,11 @@ Setting up and maintaining a test framework can sometimes be complex and time co
 ## Features
 
 - 🐦 __Lighweight__ - [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts), with zero dependencies
-- ✨ __Modern__ - ESM support without extra config
-- 🔰 __Simple__ - no API to learn, zero-config
-- ⚡ __Super fast__ - `~0.03s`
-
-
-Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and [husky-init](https://github.com/typicode/husky-init).
-
-_Requires Node v12.20.0+_
-
-_Please help me build OSS 👉 [GitHub Sponsors](https://github.com/sponsors/typicode)_
+- ✨ __Modern__ - native ESM support
+- 🔰 __Simple & straightforward__ - no API to learn, zero-config
+- ⚡ __Super fast__ - with almost zero abstractions, `xv` is fast as Node
+- 🦉 Extracted from [lowdb](https://github.com/typicode/lowdb)
+- 💖 [GitHub Sponsors](https://github.com/sponsors/typicode)
 
 ## Install
 
@@ -40,7 +35,7 @@ Create a test file `src/add.test.js` and use Node's built-in [`assert`](https://
 
 ```js
 import { strict as assert } from 'assert' // Node <=16
-// import assert from 'assert/strict'  // Node >=16
+// import assert from 'assert/strict'     // Node >=16
 
 export function testAdd() {
   assert.equal(1 + 2, 3)
@@ -64,9 +59,11 @@ npm test               # run all test files in ./src
 npx xv src/add.test.js # run a single test file
 ```
 
+_`xv` is extremely simple, there's nothing else to learn._
+
 ## Convention
 
-When provided a directory, `xv` will look for files named `*.test.js` and `test.js`.
+When provided a directory, `xv` will look for files named `*.test.js` (or `test.js`) and run exported functions sequentially.
 
 ## TypeScript
 
