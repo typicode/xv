@@ -8,8 +8,9 @@
 </h1>
 
 [![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml)
+[![install size](https://packagephobia.com/badge?p=xv)](https://packagephobia.com/result?p=xv)
 
-Setting up and maintaining a test framework can sometimes be complex and time consuming. I've created `xv` to be a test runner that is __low maintainance, easy to setup and use__. 
+Setting up/updating a test framework can sometimes be complex and time consuming. I've created `xv` to be a test runner that is __low maintainance, easy to setup and use__. 
 
 `xv` is great for __small and medium projects__.
 
@@ -44,7 +45,8 @@ export function testAdd() {
 
 Edit `package.json`:
 
-```json
+```js
+// package.json
 {
   "scripts": {
     "test": "xv src"
@@ -67,11 +69,12 @@ When provided a directory, `xv` will look for files named `*.test.js` (or `test.
 
 ## TypeScript
 
-If you're using TypeScript, compile your `.ts` and run `xv` directly on compiled `.js` files.
+To use `xv` with TypeScript, compile your `.ts` files and run `xv` directly on compiled `.js`. This has the benefit of testing code that is really published.
 
-Assuming you have the following `tsconfig.json`:
+For example, assuming your compiled files are in `lib/` :
 
-```json
+```js
+// tsconfig.json
 {
   "compilerOptions": {
     "outDir": "./lib"
@@ -79,19 +82,30 @@ Assuming you have the following `tsconfig.json`:
 }
 ```
 
-Edit `package.json` to exclude test files from being published and run `tsc` before `xv`:
+Edit `package.json` to run `xv` after `tsc`:
 
 ```js
+// package.json
 {
-  "files": [
-    "lib",
-    // exclude test files
-    "!lib/**/*.test.js",
-    "!lib/**/test.js"
-  ],
   "scripts": {
     "build": "rm -rf lib && tsc",
-    "test": "npm run build && xv lib"
+    "test": "npm run build && xv lib" // run test files in lib/
   }
 }
 ```
+
+If you're publishing to npm, exclude test files:
+
+```js
+// package.json
+{
+  "files": [
+    "lib",
+    // exclude compiled test files
+    "!lib/**/*.test.js",
+    "!lib/**/test.js"
+  ]
+}
+```
+
+You can run `npm publish --dry` to check that it's working (nothing is going to be published with the `--dry` option).
