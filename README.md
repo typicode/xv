@@ -19,7 +19,7 @@ Setting up/updating a test framework can sometimes be complex and time consuming
 - 🐦 __Lighweight__ - [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts), with zero dependencies
 - ✨ __Modern__ - native ESM support
 - 🔰 __Simple & straightforward__ - no API to learn, zero-config
-- ⚡ __Super fast__ - with almost zero abstractions, `xv` is fast as Node
+- ⚡ __Super fast__ - with almost zero abstractions, `xv` is as fast as Node
 - 🦉 Extracted from [lowdb](https://github.com/typicode/lowdb)
 - 💖 [GitHub Sponsors](https://github.com/sponsors/typicode)
 
