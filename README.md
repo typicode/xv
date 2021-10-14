@@ -20,7 +20,7 @@ Setting up/updating a test framework can sometimes be complex and time consuming
 - ✨ __Modern__ - native ESM support
 - 🔰 __Simple & straightforward__ - no API to learn, zero-config
 - ⚡ __Super fast__ - with almost zero abstractions, `xv` is as fast as Node
-- 🦉 Extracted from [lowdb](https://github.com/typicode/lowdb)
+- 🦉 Used in [lowdb](https://github.com/typicode/lowdb)
 - 💖 [GitHub Sponsors](https://github.com/sponsors/typicode)
 
 ## Install
