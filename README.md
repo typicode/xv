@@ -10,7 +10,7 @@
 [![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml)
 [![install size](https://packagephobia.com/badge?p=xv)](https://packagephobia.com/result?p=xv)
 
-Setting up/updating a test framework can sometimes be complex and time consuming. I've created `xv` to be a test runner that is __low maintainance, easy to setup and use__. 
+Setting up/updating a test framework in a project can sometimes be complex and time consuming. I've created `xv` to be a test runner that is __low maintainance, easy to setup and use__. 
 
 `xv` is great for __small and medium projects__.
 
