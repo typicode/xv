@@ -10,17 +10,13 @@
 [![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml)
 [![install size](https://packagephobia.com/badge?p=xv)](https://packagephobia.com/result?p=xv)
 
-Setting up/updating a test framework in a project can sometimes be complex and time consuming. I've created `xv` to be a test runner that is __low maintainance, easy to setup and use__. 
-
-`xv` is great for __small and medium projects__.
-
 ## Features
 
 - 🐦 __Lighweight__ - [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts), with zero dependencies
 - ✨ __Modern__ - native ESM support
 - 🔰 __Simple & straightforward__ - no API to learn, zero-config
 - ⚡ __Super fast__ - with almost zero abstractions, `xv` is as fast as Node
-- 🦉 Used in [lowdb](https://github.com/typicode/lowdb)
+- 🦉 Used to test [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents)
 - 💖 [GitHub Sponsors](https://github.com/sponsors/typicode)
 
 ## Install
@@ -31,6 +27,8 @@ yarn add xv --dev
 ```
 
 ## Usage
+
+_`xv` is extremely simple, there's nothing else to learn._
 
 Create a test file `src/add.test.js` and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module:
 
@@ -61,15 +59,13 @@ npm test               # run all test files in ./src
 npx xv src/add.test.js # run a single test file
 ```
 
-_`xv` is extremely simple, there's nothing else to learn._
-
 ## Convention
 
 When provided a directory, `xv` will look for files named `*.test.js` (or `test.js`) and run exported functions sequentially.
 
 ## TypeScript
 
-To use `xv` with TypeScript, compile your `.ts` files and run `xv` directly on compiled `.js`. This has the benefit of testing code that is really published.
+To use `xv` with TypeScript, compile your `.ts` files and run `xv` directly on compiled `.js`. This has the benefit of __testing code that is really published__.
 
 For example, assuming your compiled files are in `lib/` :
 
