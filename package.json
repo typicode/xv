@@ -48,11 +48,12 @@
     "postversion": "git push && git push --tags && npm publish"
   },
   "devDependencies": {
-    "@sindresorhus/tsconfig": "^1.0.2",
+    "@sindresorhus/tsconfig": "^2.0.0",
+    "@types/node": "^16.11.2",
     "@typicode/eslint-config": "^0.1.2",
-    "del-cli": "^3.0.1",
-    "husky": "^6.0.0",
-    "typescript": "^4.3.2"
+    "del-cli": "^4.0.1",
+    "husky": "^7.0.4",
+    "typescript": "^4.4.4"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
