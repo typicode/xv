@@ -4,5 +4,9 @@
     "outDir": "./lib",
     "module": "ESNext",
     "declaration": false
-  }
+  },
+  "include": [
+    "src/**/*",
+    "src/test/node_modules/*"
+  ]
 }

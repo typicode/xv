@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 import { promises as fs } from 'fs'
-import { basename, dirname, join } from 'path'
+import { basename, join } from 'path'
 import { pathToFileURL } from 'url'
 
 async function* walk(dir: string): AsyncGenerator<string> {
   for await (const d of await fs.opendir(dir)) {
     const entry = join(dir, d.name)
-    if (d.isDirectory()) yield* walk(entry)
+    if (d.isDirectory() && d.name !== 'node_modules') yield* walk(entry)
     else if (d.isFile()) yield entry
   }
 }
@@ -32,8 +32,8 @@ async function run(arg = '.') {
   }
   for await (const file of walk(arg)) {
     if (
-      !dirname(file).includes('node_modules') &&
-      (basename(file) === 'test.js' || file.endsWith('.test.js'))
+      basename(file) === 'test.js' ||
+      file.endsWith('.test.js')
     ) {
       console.log(file)
       await runTestFile(file)
