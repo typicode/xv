@@ -1,7 +1,7 @@
 {
   "name": "xv",
   "version": "1.0.2",
-  "description": "Modern and low maintenance test library/CLI",
+  "description": "Modern and low maintenance test runner",
   "keywords": [
     "test",
     "framework",
@@ -36,9 +36,7 @@
   "files": [
     "lib",
     "!lib/**/*.test.js",
-    "!lib/**/test.js",
-    "LICENSE-MIT",
-    "LICENSE-SPONSOR"
+    "!lib/**/test.js"
   ],
   "scripts": {
     "test": "npm run build && node lib/bin.js lib",
