@@ -16,7 +16,7 @@
 - ✨ __Modern__ - native ESM support
 - 🔰 __Simple & straightforward__ - no API to learn, zero-config
 - ⚡ __Super fast__ - with almost zero abstractions, `xv` is as fast as Node
-- 🦉 Used to test [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents)
+- 🦉 Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents)
 - 💖 [GitHub Sponsors](https://github.com/sponsors/typicode)
 
 ## Install
