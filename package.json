@@ -30,7 +30,6 @@
   "license": "MIT",
   "author": "Typicode <typicode@gmail.com>",
   "type": "module",
-  "types": "lib",
   "bin": "./lib/bin.js",
   "files": [
     "lib",
