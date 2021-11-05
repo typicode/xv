@@ -7,17 +7,11 @@
   <br>
 </p>
 
-[![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml)
-[![install size](https://packagephobia.com/badge?p=xv)](https://packagephobia.com/result?p=xv)
-
-## Features
-
+- 🔰 __Friendlier__ - zero-config, no API to learn, simple conventions
 - 🐦 __Lighweight__ - [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts), with zero dependencies
-- ✨ __Modern__ - native ESM support
-- 🔰 __Simple & straightforward__ - no API to learn, zero-config
 - ⚡ __Super fast__ - with almost zero abstractions, `xv` is as fast as Node
 - 🦉 Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents)
-- 💖 [GitHub Sponsors](https://github.com/sponsors/typicode)
+- 👍 Supports ESM and TypeScript
 
 ## Install
 
@@ -61,7 +55,7 @@ npx xv src/add.test.js # run a single test file
 
 ## Convention
 
-When provided a directory, `xv` will look for files named `*.test.js` (or `test.js`) and run exported functions sequentially.
+When provided a directory, `xv` will look for files named `*.test.js` or `test.js` and run exported functions sequentially.
 
 ## TypeScript
 
