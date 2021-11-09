@@ -7,28 +7,19 @@
   <br>
 </p>
 
-- 🔰 __Friendlier__ - zero-config, no API to learn, simple conventions
-- 🐦 __Lighweight__ - [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts), with zero dependencies
-- ⚡ __Super fast__ - with almost zero abstractions, `xv` is as fast as Node
-- 🦉 Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents)
-- 👍 Supports ESM and TypeScript
-
 ## Install
 
 ```sh
 npm install xv --save-dev
-yarn add xv --dev
 ```
 
 ## Usage
 
-_`xv` is extremely simple, there's nothing else to learn._
-
-Create a test file `src/add.test.js` and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module:
+Create a test file and use Node's built-in [`assert`](https://nodejs.org/api/assert.html) module:
 
 ```js
-import { strict as assert } from 'assert' // Node <=16
-// import assert from 'assert/strict'     // Node >=16
+// src/add.test.js
+import { strict as assert } from 'assert'
 
 export function testAdd() {
   assert.equal(1 + 2, 3)
@@ -52,6 +43,14 @@ Run your tests:
 npm test               # run all test files in ./src
 npx xv src/add.test.js # run a single test file
 ```
+
+## Why?
+
+- 🔰 __Friendlier__ - zero-config, no API to learn, simple conventions
+- 🐦 __Lighweight__ - [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts), with zero dependencies
+- ⚡ __Super fast__ - with almost zero abstractions, `xv` is as fast as Node
+- 🦉 Runs test in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents)
+- 👍 Supports ESM and TypeScript
 
 ## Convention
 
