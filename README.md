@@ -28,8 +28,7 @@ export function testAdd() {
 
 Edit `package.json`:
 
-```js
-// package.json
+```json
 {
   "scripts": {
     "test": "xv src"
@@ -65,37 +64,22 @@ When provided a directory, `xv` will look for files named `*.test.js` or `test.j
 
 To use `xv` with TypeScript, compile your `.ts` files and run `xv` directly on compiled `.js`. This has the benefit of __testing code that is really published__.
 
-For example, assuming your compiled files are in `lib/` :
+For example, assuming your compiled files are in `lib/`, edit `package.json` to run `xv` after `tsc`:
 
-```js
-// tsconfig.json
-{
-  "compilerOptions": {
-    "outDir": "./lib"
-  }
-}
-```
-
-Edit `package.json` to run `xv` after `tsc`:
-
-```js
-// package.json
+```json
 {
   "scripts": {
-    "build": "rm -rf lib && tsc",
-    "test": "npm run build && xv lib" // run test files in lib/
+    "test": "tsc && xv lib"
   }
 }
 ```
 
-If you're publishing to npm, exclude test files:
+If you're publishing to npm, edit `package.json`to exclude compiled test files:
 
-```js
-// package.json
+```json
 {
   "files": [
     "lib",
-    // exclude compiled test files
     "!lib/**/*.test.js",
     "!lib/**/test.js"
   ]
