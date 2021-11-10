@@ -53,8 +53,8 @@ npx xv src/add.test.js
 - 🔰 __Friendlier__ - zero-config, no API to learn, simple conventions
 - 🐦 __Lighweight__ - [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts), with zero dependencies
 - ⚡ __Super fast__ - with almost zero abstractions, `xv` is as fast as Node
-- 🦉 Runs test in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents)
-- 👍 Supports ESM and TypeScript
+
+Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents). Supports ESM and TypeScript.
 
 ## Convention
 
