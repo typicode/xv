@@ -37,11 +37,16 @@ Edit `package.json`:
 }
 ```
 
-Run your tests:
+Run all test files:
 
 ```sh
-npm test               # run all test files in ./src
-npx xv src/add.test.js # run a single test file
+npm test
+```
+
+Run a single test file:
+
+```sh
+npx xv src/add.test.js 
 ```
 
 ## Why?
