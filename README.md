@@ -1,11 +1,18 @@
 <p align="center">
   <br>
-  <br>
   <img src="xv.svg" alt="xv" height=50>
   <br>
   <br>
-  <br>
 </p>
+
+## Why
+
+- __User-friendly__ - zero-config, no API to learn, simple conventions
+- __Extremely lighweight__ - [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts) and no dependencies
+- __Super fast__ - with almost zero abstractions, `xv` is as fast as Node
+
+Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents). Supports ESM and TypeScript.
+
 
 ## Install
 
@@ -47,14 +54,6 @@ Run a single test file:
 ```sh
 npx xv src/add.test.js 
 ```
-
-## Why?
-
-- 🔰 __Friendlier__ - zero-config, no API to learn, simple conventions
-- 🐦 __Lighweight__ - [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts), with zero dependencies
-- ⚡ __Super fast__ - with almost zero abstractions, `xv` is as fast as Node
-
-Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents). Supports ESM and TypeScript.
 
 ## Convention
 
