@@ -8,11 +8,11 @@
 ## Why
 
 - __User-friendly__ - zero-config, no API to learn, simple conventions
-- __Extremely lighweight__ - [`40 LOC`](https://github.com/typicode/xv/blob/main/src/bin.ts) and no dependencies
+- __Extremely lighweight__ - only [`40 lines of code`](https://github.com/typicode/xv/blob/main/src/bin.ts) and no dependencies
 - __Super fast__ - with almost zero abstractions, `xv` is as fast as Node
+- __Stable__ - low maintenance and probably feature complete ;)
 
-Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents). Supports ESM and TypeScript.
-
+Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents).
 
 ## Install
 
