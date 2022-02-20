@@ -19,7 +19,7 @@
 
 The project being very simple by design, there probably won't be frequent updates to the code (_which is a good thing for you, unless you like Dependabot alerts and updating devDependencies_). It will be updated to support latest Node releases and implement potential improvements. 
 
-__tl;dr__ xv is maintained and used even though code updates may not be recent.
+__tl;dr__ xv is maintained and used, even though code updates may not be recent.
 
 ## Install
 
