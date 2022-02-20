@@ -7,19 +7,19 @@
 
 ## Why
 
-- __User-friendly__ - zero-config, no API to learn, simple convention
+- __User-friendly__ - zero-config, no API to learn, simple convention, ESM support
 - __Extremely lighweight__ - only [`40 lines of code`](https://github.com/typicode/xv/blob/main/src/bin.ts) and no dependencies
 - __Blazingly fast__ - with almost zero abstractions, xv is as fast as Node
 - __Stable__ - very low maintenance
 - __Unix philosophy™__ - `do one thing well`, xv is _only_ a test runner
 
-Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/typicode/steno) and other [awesome projects](https://github.com/typicode/xv/network/dependents).
+[lowdb](https://github.com/typicode/lowdb) (local JSON database), [steno](https://github.com/typicode/steno) (fast file writer) and other [awesome projects](https://github.com/typicode/xv/network/dependents) are using xv to run tests.
 
-## A word on releases
+## Status
 
-xv being very simple by design, there probably won't be frequent updates (which is a good thing as it means less work for you). However, this doesn't mean  that the project is not maintained or not used, it's just (probably) feature complete as it is :)
+The project being very simple by design, there probably won't be frequent updates to the code (_which is a good thing for you, unless you like Dependabot alerts and updating devDependencies_). It will be updated to support latest Node releases and implement potential improvements. 
 
-xv will be updated to follow the latest Node API changes or improvements.
+__tl;dr__ xv is maintained and used even though code updates may not be recent.
 
 ## Install
 
@@ -64,7 +64,7 @@ npx xv src/add.test.js
 
 ## Convention
 
-When provided a directory, xv will look for files named `*.test.js` or `test.js` and run exported functions sequentially.
+When provided with a directory, xv will look for files named `*.test.js` or `test.js` and run exported functions sequentially.
 
 ## TypeScript
 
@@ -75,24 +75,24 @@ For example, assuming your compiled files are in `lib/`, edit `package.json` to 
 ```diff
 {
   "scripts": {
--    "test": "xv src"
-+    "test": "tsc && xv lib"
+-   "test": "xv src"
++   "test": "tsc && xv lib"
   }
 }
 ```
 
-If you're publishing to npm, edit `package.json`to exclude compiled test files:
+If you're publishing to npm, edit `package.json` to exclude compiled test files:
 
-```json
+```diff
 {
   "files": [
     "lib",
-    "!lib/**/*.test.js",
-    "!lib/**/test.js"
++   "!lib/**/*.test.js",
++   "!lib/**/test.js"
   ]
 }
 ```
 
 ## Watch mode
 
-xv doesn't integrate a watch mode, instead if the feature is needed, it's recommended to use tools like [watchexec](https://github.com/watchexec/watchexec) or [chokidar-cli](https://github.com/open-cli-tools/chokidar-cli).
+xv doesn't integrate a watch mode. If the feature is needed, it's recommended to use tools like [watchexec](https://github.com/watchexec/watchexec) or [chokidar-cli](https://github.com/open-cli-tools/chokidar-cli) to re-run xv when there are changes.
