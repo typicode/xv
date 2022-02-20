@@ -17,7 +17,7 @@ Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/t
 
 ## A word on releases
 
-xv being very simple by design, there probably won't be frequent updates (which is a good thing as it means less work for you). However, this doesn't mean  that the project is not maintained or not used, it's just (probably) feature complete as it is.
+xv being very simple by design, there probably won't be frequent updates (which is a good thing as it means less work for you). However, this doesn't mean  that the project is not maintained or not used, it's just (probably) feature complete as it is :)
 
 xv will be updated to follow the latest Node API changes or improvements.
 
@@ -95,4 +95,4 @@ If you're publishing to npm, edit `package.json`to exclude compiled test files:
 
 ## Watch mode
 
-xv doesn't integrate a watch mode, instead if the feature is needed, it's recommended to use tools like [watchexec](https://github.com/watchexec/watchexec) or [chokidar-cli](https://github.com/open-cli-tools/chokidar-cli)).
+xv doesn't integrate a watch mode, instead if the feature is needed, it's recommended to use tools like [watchexec](https://github.com/watchexec/watchexec) or [chokidar-cli](https://github.com/open-cli-tools/chokidar-cli).
