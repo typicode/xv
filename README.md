@@ -19,7 +19,7 @@ Used in [lowdb](https://github.com/typicode/lowdb), [steno](https://github.com/t
 
 xv being very simple by design, there probably won't be frequent updates (which is a good thing as it means less work for you). However, this doesn't mean  that the project is not maintained or not used, it's just (probably) feature complete as it is.
 
-That said, xv will be updated to follow the latest Node API changes or improvements.
+xv will be updated to follow the latest Node API changes or improvements.
 
 ## Install
 
