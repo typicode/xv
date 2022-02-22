@@ -1,3 +1,6 @@
+[![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml)
+
+
 <p align="center">
   <br>
   <img src="xv.svg" alt="xv" height=50>
@@ -5,15 +8,15 @@
   <br>
 </p>
 
-## Why
+## Features
 
-- __User-friendly__ - zero-config, no API to learn, simple convention, ESM support
-- __Extremely lighweight__ - only [`40 lines of code`](https://github.com/typicode/xv/blob/main/src/bin.ts) and no dependencies
+- __Simplest__ - zero-config, no API to learn, simple convention, out of the box ESM/CJS support
+- __Smallest__ - only [`40 lines of code`](https://github.com/typicode/xv/blob/main/src/bin.ts) and no dependencies
 - __Blazingly fast__ - with almost zero abstractions, xv is as fast as Node
 - __Stable__ - very low maintenance
 - __Unix philosophy™__ - `do one thing well`, xv is _only_ a test runner
 
-[lowdb](https://github.com/typicode/lowdb) (local JSON database), [steno](https://github.com/typicode/steno) (fast file writer) and other [awesome projects](https://github.com/typicode/xv/network/dependents) are using xv to run tests.
+Used by [lowdb](https://github.com/typicode/lowdb) (local JSON database), [steno](https://github.com/typicode/steno) (fast file writer) and other [awesome projects](https://github.com/typicode/xv/network/dependents).
 
 ## Status
 
@@ -34,9 +37,11 @@ Create a test file and use Node's built-in [`assert`](https://nodejs.org/api/ass
 ```js
 // src/add.test.js
 import { strict as assert } from 'assert'
+import add from './add.js'
 
+// This is plain Node code, there's no xv API
 export function testAdd() {
-  assert.equal(1 + 2, 3)
+  assert.equal(add(1, 2), 3)
 }
 ```
 
@@ -90,6 +95,21 @@ If you're publishing to npm, edit `package.json` to exclude compiled test files:
 +   "!lib/**/*.test.js",
 +   "!lib/**/test.js"
   ]
+}
+```
+
+## Common JS
+
+xv can also test CJS code.
+
+```js
+// src/add.test.js
+const assert = require('assert').strict;
+const add = require('./add')
+
+// This is plain Node code, there's no xv API
+exports.testAdd = function() {
+  assert.equal(add(1, 2), 3)
 }
 ```
 
