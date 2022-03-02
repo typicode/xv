@@ -10,10 +10,10 @@
 
 ## Features
 
-- __Simplest__ - zero-config, no API to learn, simple convention, out of the box ESM/CJS support
-- __Smallest__ - only [`40 lines of code`](https://github.com/typicode/xv/blob/main/src/bin.ts) and no dependencies
+- __Simple__ - zero-config, no API to learn, out of the box ESM/CJS support
+- __Lightweight__ - 6kB and no dependencies
+- __Magical__ - simply export test functions, that's all
 - __Blazingly fast__ - with almost zero abstractions, xv is as fast as Node
-- __Stable__ - very low maintenance
 - __Unix philosophy™__ - `do one thing well`, xv is _only_ a test runner
 
 Used by [lowdb](https://github.com/typicode/lowdb) (local JSON database), [steno](https://github.com/typicode/steno) (fast file writer) and other [awesome projects](https://github.com/typicode/xv/network/dependents).
