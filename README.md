@@ -18,12 +18,6 @@
 
 Used by [lowdb](https://github.com/typicode/lowdb) (local JSON database), [steno](https://github.com/typicode/steno) (fast file writer) and other [awesome projects](https://github.com/typicode/xv/network/dependents).
 
-## Status
-
-The project being very simple by design, there probably won't be frequent updates to the code (_which is a good thing for you, unless you like Dependabot alerts and updating devDependencies_). It will be updated to support latest Node releases and implement potential improvements. 
-
-__tl;dr__ xv is maintained and used, even though code updates may not be recent.
-
 ## Install
 
 ```sh
@@ -116,3 +110,9 @@ exports.testAdd = function() {
 ## Watch mode
 
 xv doesn't integrate a watch mode. If the feature is needed, it's recommended to use tools like [watchexec](https://github.com/watchexec/watchexec) or [chokidar-cli](https://github.com/open-cli-tools/chokidar-cli) to re-run xv when there are changes.
+
+## Status
+
+The project being very simple by design, there probably won't be frequent updates to the code (_which is a good thing for you, unless you like Dependabot alerts and updating devDependencies_). It will be updated to support latest Node releases and implement potential improvements. 
+
+__tl;dr__ xv is maintained and used, even though code updates may not be recent.
