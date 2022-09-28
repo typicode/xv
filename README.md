@@ -107,6 +107,23 @@ exports.testAdd = function() {
 }
 ```
 
+## Coverage
+
+You can use c8 with xv.
+
+```sh
+npm install c8 --save-dev
+```
+
+```diff
+{
+  "scripts": {
++  "coverage": "c8 xv src",
+   "test": "xv src"
+  }
+}
+```
+
 ## Watch mode
 
 xv doesn't integrate a watch mode. If the feature is needed, it's recommended to use tools like [watchexec](https://github.com/watchexec/watchexec) or [chokidar-cli](https://github.com/open-cli-tools/chokidar-cli) to re-run xv when there are changes.
