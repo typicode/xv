@@ -37,8 +37,12 @@
     "!lib/**/test.js"
   ],
   "scripts": {
-    "test": "npm run build && node lib/bin.js lib",
-    "test:output": "npm run build && node lib/bin.js output.js",
+    "test": "npm run build && npm run test:js && npm run test:js:no-param && npm run test:ts && npm run test:ts:no-param",
+    "test:js": "node lib/bin.js lib",
+    "test:js:no-param": "cd lib && node bin.js",
+    "test:ts": "node lib/bin.js --loader=ts-node/esm src",
+    "test:ts:no-param": "cd src && node ../lib/bin.js --loader=ts-node/esm",
+    "test:output": "node lib/bin.js output.js",
     "lint": "eslint src --ext .ts --ignore-path .gitignore",
     "build": "del-cli lib && tsc",
     "prepare": "husky install",
@@ -46,12 +50,13 @@
     "postversion": "git push && git push --tags && npm publish"
   },
   "devDependencies": {
-    "@sindresorhus/tsconfig": "^2.0.0",
-    "@types/node": "^16.11.2",
-    "@typicode/eslint-config": "^0.1.2",
-    "del-cli": "^4.0.1",
-    "husky": "^7.0.4",
-    "typescript": "^4.4.4"
+    "@sindresorhus/tsconfig": "^3.0.1",
+    "@types/node": "^18.11.12",
+    "@typicode/eslint-config": "^1.1.0",
+    "del-cli": "^5.0.0",
+    "husky": "^8.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
