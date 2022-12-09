@@ -1,4 +1,4 @@
-[![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml) [![install size](https://packagephobia.com/badge?p=xv)](https://packagephobia.com/result?p=xv)
 
 
 <p align="center">
@@ -86,7 +86,7 @@ npm install ts-node --save-dev
 ```json
 {
   "scripts": {
-	"test": "xv --loader=ts-node/esm src"
+    "test": "xv --loader=ts-node/esm src"
   }
 }
 ```
