@@ -77,7 +77,7 @@ And run exported functions sequentially.
 
 ## TypeScript
 
-### With [ts-node](https://typestrong.org/ts-node/)
+### With TypeScript + [ts-node](https://typestrong.org/ts-node/)
 
 ```sh
 npm install ts-node --save-dev
@@ -91,9 +91,9 @@ npm install ts-node --save-dev
 }
 ```
 
-### With tsc only
+### With TypeScript only
 
-Compile your `.ts` files and run `xv` on compiled `.js` files. 
+Compile your `.ts` files using `tsc` and run `xv` on compiled `.js` files. 
 
 For example, assuming your compiled files are in `lib/`, edit `package.json` to run `xv` after `tsc`:
 
