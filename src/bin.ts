@@ -46,7 +46,7 @@ async function runTestFile(file: string): Promise<void> {
     if (typeof v === 'function') functions.push(v)
   }
   if (functions.length === 0) {
-    console.log(`${file}: no test found!`)
+    console.log(`${file}: no tests found!`)
   } else {
     console.time(file)
     for (const fn of functions) {
