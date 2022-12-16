@@ -38,18 +38,26 @@ async function* walk(dir: string): AsyncGenerator<string> {
 }
 
 async function runTestFile(file: string): Promise<void> {
-  for (const value of Object.values(
+  const functions = []
+  for (const v of Object.values(
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     await import(pathToFileURL(file).toString()),
   )) {
-    if (typeof value === 'function') {
+    if (typeof v === 'function') functions.push(v)
+  }
+  if (functions.length === 0) {
+    console.log(`${file}: no test found!`)
+  } else {
+    console.time(file)
+    for (const fn of functions) {
       try {
-        await value()
+        await fn()
       } catch (e) {
         console.error(e instanceof Error ? e.stack : e)
         process.exit(1)
       }
     }
+    console.timeEnd(file)
   }
 }
 
@@ -60,7 +68,6 @@ async function run(paths: string[]) {
     }
     for await (const file of walk(p)) {
       if (regexp.test(basename(file))) {
-        console.log(file)
         await runTestFile(file)
       }
     }
