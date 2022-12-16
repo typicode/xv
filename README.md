@@ -1,6 +1,3 @@
-[![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml) [![install size](https://packagephobia.com/badge?p=xv)](https://packagephobia.com/result?p=xv)
-
-
 <p align="center">
   <br>
   <img src="xv.svg" alt="xv" height=50>
@@ -8,7 +5,9 @@
   <br>
 </p>
 
-> A test runner focused on simplicity (and speed) 🔰
+[![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml) [![install size](https://packagephobia.com/badge?p=xv)](https://packagephobia.com/result?p=xv)
+
+> A test runner focused on simplicity and speed
 
 ```sh
 $ xv ./src
@@ -16,9 +15,7 @@ src/add.test.js: 0.103ms
 src/sub.test.js: 0.064ms
 ```
 
-Used in [lowdb](https://github.com/typicode/lowdb) (local JSON database), [steno](https://github.com/typicode/steno) (fast file writer) and other [awesome projects](https://github.com/typicode/xv/network/dependents).
-
-[benchmark](https://github.com/icetbr/comparing-testing-libraries) (xv is among the fastest).
+_Extracted from [lowdb](https://github.com/typicode/lowdb) (TypeScript and ESM local database). One of the fastest test runner according to this [benchmark](https://github.com/icetbr/comparing-testing-libraries)._
 
 ## Install
 
@@ -51,16 +48,11 @@ Edit `package.json`:
 }
 ```
 
-Run all test files:
+Run tests:
 
 ```sh
-npm test
-```
-
-Run a single test file:
-
-```sh
-npx xv src/add.test.js 
+npm test                # run all test files in ./src
+npx xv src/add.test.js  # run a single test file
 ```
 
 ## Convention
@@ -99,19 +91,17 @@ For example, assuming your compiled files are in `lib/`, edit `package.json` to 
 
 If you're publishing to npm, edit `package.json` to exclude compiled test files:
 
-```diff
+```json
 {
   "files": [
     "lib",
-+   "!lib/**/*.test.js",
-+   "!lib/**/test.js"
+    "!lib/**/*.test.js",
+    "!lib/**/test.js"
   ]
 }
 ```
 
 ## Common JS
-
-xv can also test CJS code.
 
 ```js
 // src/add.test.js
