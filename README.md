@@ -8,18 +8,17 @@
   <br>
 </p>
 
-> xv is a blazingly fast test runner that works differently
+> A test runner focused on simplicity (and speed) 🔰
 
-## Features
+```sh
+$ xv ./src
+src/add.test.js: 0.103ms
+src/sub.test.js: 0.064ms
+```
 
-- __Simple__ - zero-config, no API to learn, out of the box ESM/CJS support
-- __TypeScript__ - no complex setup, xv works with TypeScript + ESM
-- __Blazingly fast__ - with almost zero abstractions, xv is one of the fastest test runners
-- __Different__ - simply export test functions, doesn't hide console logs, raw errors, ... 
-- __Lightweight__ - 2kB for the runner code and no dependencies
-- __Unix philosophy™__ - `do one thing well`, xv is _only_ a test runner
+Used in [lowdb](https://github.com/typicode/lowdb) (local JSON database), [steno](https://github.com/typicode/steno) (fast file writer) and other [awesome projects](https://github.com/typicode/xv/network/dependents).
 
-Used by [lowdb](https://github.com/typicode/lowdb) (local JSON database), [steno](https://github.com/typicode/steno) (fast file writer) and other [awesome projects](https://github.com/typicode/xv/network/dependents).
+[benchmark](https://github.com/icetbr/comparing-testing-libraries) (xv is among the fastest).
 
 ## Install
 
@@ -66,14 +65,7 @@ npx xv src/add.test.js
 
 ## Convention
 
-When provided with a directory, xv will look for files named:
-
-* `*.test.js`
-* `test.js`
-* `*.test.ts`
-* `test.ts`
-
-And run exported functions sequentially.
+By default, xv will look for files named: `*.test.js`, `test.js`, `*.test.ts` and `test.ts`
 
 ## TypeScript
 
@@ -100,8 +92,7 @@ For example, assuming your compiled files are in `lib/`, edit `package.json` to 
 ```diff
 {
   "scripts": {
--   "test": "xv src"
-+   "test": "tsc && xv lib"
+    "test": "tsc && xv lib"
   }
 }
 ```
@@ -127,7 +118,6 @@ xv can also test CJS code.
 const assert = require('assert').strict;
 const add = require('./add')
 
-// This is plain Node code, there's no xv API
 exports.testAdd = function() {
   assert.equal(add(1, 2), 3)
 }
@@ -135,4 +125,4 @@ exports.testAdd = function() {
 
 ## Watch mode
 
-xv doesn't integrate a watch mode. If the feature is needed, it's recommended to use tools like [watchexec](https://github.com/watchexec/watchexec) or [chokidar-cli](https://github.com/open-cli-tools/chokidar-cli) to re-run xv when there are changes.
+xv doesn't have a watch mode. If the feature is needed, it's recommended to use tools like [watchexec](https://github.com/watchexec/watchexec) or [chokidar-cli](https://github.com/open-cli-tools/chokidar-cli) to re-run xv when there are changes.
