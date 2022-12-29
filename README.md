@@ -81,7 +81,7 @@ Compile your `.ts` files using `tsc` and run `xv` on compiled `.js` files.
 
 For example, assuming your compiled files are in `lib/`, edit `package.json` to run `xv` after `tsc`:
 
-```diff
+```json
 {
   "scripts": {
     "test": "tsc && xv lib"
