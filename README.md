@@ -15,7 +15,15 @@ src/add.test.js: 0.103ms
 src/sub.test.js: 0.064ms
 ```
 
-_Extracted from [lowdb](https://github.com/typicode/lowdb) (TypeScript and ESM local database). One of the fastest test runner according to this [benchmark](https://github.com/icetbr/comparing-testing-libraries)._
+_Extracted from [lowdb](https://github.com/typicode/lowdb). One of the fastest test runner according to this [benchmark](https://github.com/icetbr/comparing-testing-libraries)._
+
+## Why?
+
+With so many existing alternatives, why another test runner?
+
+I wanted and needed something dead simple. Usually test runner/frameworks require to read multi-page documentation, hide logs and transform errors, can have complex configuration to support a wide variety of cases.
+
+`xv` takes the opposite approach and makes you productive faster by being simpler. In fact, the complete documentation about `xv` fits this page and its code is only ~80 lines. Give it a try.
 
 ## Install
 
