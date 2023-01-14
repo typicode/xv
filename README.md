@@ -7,7 +7,7 @@
 
 [![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml) [![install size](https://packagephobia.com/badge?p=xv)](https://packagephobia.com/result?p=xv)
 
-> A tiny test runner focused on simplicity and speed
+> A tiny (~80LOC of TypeScript) test runner focused on simplicity and speed
 
 ```sh
 $ xv ./src
@@ -17,13 +17,11 @@ src/sub.test.js: 0.064ms
 
 _Extracted from [lowdb](https://github.com/typicode/lowdb). One of the fastest test runner according to this [benchmark](https://github.com/icetbr/comparing-testing-libraries)._
 
-## Why?
+## Why
 
-With so many existing alternatives, why another test runner?
+If you've used other test runners, you probably have spent a significant amount of time reading docs, configuring, maintaining and debugging them.
 
-I wanted and needed something dead simple. Usually test runner/frameworks require to read multi-page documentation, hide logs and transform errors, can have complex configuration to support a wide variety of cases.
-
-`xv` takes the opposite approach and makes you productive faster by being simpler. In fact, the complete documentation about `xv` fits this page and its code is only ~80 lines. Give it a try.
+xv by being extremely simple gets out of your way and lets you be productive faster. In fact, the whole project documentation fits in this page.
 
 ## Install
 
