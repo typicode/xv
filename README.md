@@ -21,7 +21,7 @@ _Extracted from [lowdb](https://github.com/typicode/lowdb). One of the fastest t
 
 If you've used other test runners, you probably have spent a significant amount of time reading docs, configuring, maintaining and debugging them.
 
-xv by being extremely simple gets out of your way and lets you be productive faster. In fact, the whole project documentation fits in this page.
+By being extremely simple, xv gets out of your way and lets you be productive faster. In fact, the whole project documentation fits in this page ;)
 
 ## Install
 
