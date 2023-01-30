@@ -7,7 +7,7 @@
 
 [![Node.js CI](https://github.com/typicode/xv/actions/workflows/node.js.yml/badge.svg)](https://github.com/typicode/xv/actions/workflows/node.js.yml) [![install size](https://packagephobia.com/badge?p=xv)](https://packagephobia.com/result?p=xv)
 
-> A tiny (~80LOC of TypeScript) test runner focused on simplicity and speed
+> A tiny (~80 lines of TypeScript) test runner focused on simplicity and speed
 
 ```sh
 $ xv ./src
