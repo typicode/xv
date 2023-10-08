@@ -15,7 +15,7 @@ src/add.test.js: 0.103ms
 src/sub.test.js: 0.064ms
 ```
 
-_Extracted from [lowdb](https://github.com/typicode/lowdb). One of the fastest test runner according to this [benchmark](https://github.com/icetbr/comparing-testing-libraries)._
+_Extracted from [lowdb](https://github.com/typicode/lowdb). Fastest test runner according to this [benchmark](https://github.com/icetbr/comparing-testing-libraries)._
 
 ## Why
 
